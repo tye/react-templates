@@ -16,7 +16,7 @@ module ReactTemplates
     def template(template_name)
       <<-JS
         (function() {
-          if (typeof(window.templates) == 'undefined') { window.templates = {}; }
+          if (typeof(window.JST) == 'undefined') { window.JST = {}; }
           window.JST[#{template_name.to_json}] = #{react_template};
         }());
       JS
